@@ -1,0 +1,54 @@
+{{Infobox Character
+|image= File:BotW Baddek Model.png
+|caption= 
+|pronunciation= 
+|title= 
+|alias= 
+|race= {{Term|BotW|Hylian|link}}
+|gender= Male<ref name="Guy"/>
+|game= {{BotW}}
+|other= 
+|era= {{Term|BotW|Era of the Wilds|link}}
+|family= Unnamed wife <small>(estranged)</small><ref name="Wife">{{Cite|I talk about horses so much that my wife left me...for a horse.|Baddek|BotW}}</ref>
+|voiceactor= 
+|theme= 
+|counter= 
+}}
+{{Term/Store|Baddek||Series, BotW}} is a character in {{BotW}}.<ref>{{Cite|Baddek|N/A|BotW}}</ref>
+
+==Biography==
+Baddek is a {{Term|BotW|Hylian|link}} who rides a {{Term|BotW|Horse}}, carrying a {{Term|BotW|Wooden Shield|link}} and {{Term|BotW|Traveler's Sword|link}}. He travels along the road from [[Serenne Stable]] all the way to [[Tabantha Bridge Stable]] and back. Once he reaches a Stable, he'll rest nearby with his Horse for a moment before leaving again.
+
+When spoken to, Baddek will reveal that he has a great appreciation for Horses, claiming he sees the world through "horse-tinted glasses".<ref name="Guy">{{Cite|I'm the kind of guy who sees everything in his life through horse-tinted glasses.|Baddek|BotW}}</ref> He also tells {{Term|BotW|Link|link}} that he only talks about Horses.<ref>{{Cite|I'll tell you now, you'd best give up hope of hearing about anything other than horses from me.|Baddek|BotW}}</ref><ref>{{Cite|I'm glad you wanted to chat with me, but I really only like to talk about horses. So...|Baddek|BotW}}</ref><ref>{{Cite|If you came to ask me about Hyrule Castle, you're barking up the wrong tree. Horses, horses, horses. That's all I care about|Baddek|BotW}}</ref><ref>{{Cite|If you get me started about horses, you'll be here for a while. I can go on about horses longer than a horse's face.|Baddek|BotW}}</ref> While he has difficulties speaking with others, he finds that Horses love him.<ref>{{Cite|I'm terrible at communicating with other people, but horses love me.|Baddek|BotW}}</ref> Due to how much he talks about Horses, his wife left him for one.<ref name="Wife"/> He doesn't mind, though, as it gives him more time to talk about Horses.<ref>{{Cite|But it's not all bad. Gives me more time to talk about horses.|Baddek|BotW}}</ref>
+
+To Baddek, taming wild Horses is like adopting a new family member that you can sit on.<ref>{{Cite|Finding and taming a wild horse is like adopting a new family member... that you can sit on.|Baddek|BotW}}</ref><ref>{{Cite|Once you tame a wild horse, it becomes family. Register it at a stable to make it official.|Baddek|BotW}}</ref> He says that registered Horse companions will always be by your side, until they die.<ref>{{Cite|Once you register your horse companion at a stable, it'll always be by your side. Forever. Unless it dies.|Baddek|BotW}}</ref> Baddek's Horse is the one thing he can't travel without.<ref>{{Cite|The thing I absolutely can't travel without is my horse.|Baddek|BotW}}</ref><ref>{{Cite|There's one thing I absolutely can't travel without. Know what it is? It's my horse.|Baddek|BotW}}</ref> As long as he has his Horse, Baddek says he doesn't need anything else, and he believes the Horse is more important than he is.<ref>{{Cite|As long as I have my horse, I don't need anything else. He's more important than I am, to be honest!|Baddek|BotW}}</ref> In addition, he states that his Horse's saddle fits both him and the Horse perfectly.<ref>{{Cite|This saddle fits my horse's back perfectly, and it also fits my rear end perfectly. I'm mighty happy with it.|Baddek|BotW}}</ref> The Horse's bridle is also easy to grasp and elastic.<ref>{{Cite|This bridle is easy to grasp, and it's pretty elastic, so it's easy to handle.|Baddek|BotW}}</ref>
+
+Occasionally, Baddek will give Link tips for handling Horses, saying to pet them when they follow directions and work hard, as praising them reinforces good behavior.<ref>{{Cite|Pet your horse when it follows directions. Pet it when it works hard. Praise your horse at the right time to reinforce good behavior.|Baddek|BotW}}</ref> In addition, he tells Link that he can't expect a horse to ride hard for him without a meaningful connection,<ref>{{Cite|You can't expect a horse to ride hard for you if you don't have a meaningful connection with it.|Baddek|BotW}}</ref> and that he should spend time with his Horse to form a bond.<ref>{{Cite|Spending time with your horse is the best way to establish a connection.|Baddek|BotW}}</ref> He also recite Horse facts, stating that Horses can swim if they need to.<ref>{{Cite|Did you know that horses can swim in a pinch?|Baddek|BotW}}</ref> After this, he'll ask Link to name another animal that swims, but says it's a trick question as there aren't any.<ref>{{Cite|Name another animal that can swim. Trick question—you can't. But horses have it down cold. BOOM.|Baddek|BotW}}</ref> He also informs Link that {{Plural|BotW|Stable|link}} fit registered Horses with saddles and bridles.<ref>{{Cite|When you register a wild horse at a stable, they'll fit it with a saddle and bridle.|Baddek|BotW}}</ref>
+
+One type of Horse Baddek likes the most is the {{Term|BotW|White Horse|link}}, claiming he's heard of a special Horse in the [[Sanidin Park Ruins]] fit for a king.<ref>{{Cite|I heard that there's something special near Satori Mountain northwest of the Great Plateau. To the east of the mountain, you'll find Sanidin Park Ruins, and near there... is a special horse fit for a king.|Baddek|BotW}}</ref> While girls dream about princes on White Horses, Baddek only cares about the White Horse.<ref>{{Cite|Girls often talk dreamily about princes on white horses or some odd nonsense... But I couldn't care less about some stuffy prince. Give me the horse!|Baddek|BotW}}</ref> Though Horses come in many colors, White Horses take his breath away.<ref>{{Cite|Pinto, chestnut, black... Horse coats come in many different colors, but white horses take my breath away.|Baddek|BotW}}</ref>
+
+Baddek has also ridden a {{Term|BotW|Stalhorse|link}} in the [[Hebra Mountains]].<ref>{{Cite|Speaking of bones, I once rode a horse made of nothing but bones! No lie! It was up in the snowy mountains.|Baddek|BotW}}</ref> Since he could never be afraid of a Horse, Baddek claims he wasn't scared of it.<ref>{{Cite|Was I scared, you ask? Nope. I could never be scared of a horse.|Baddek|BotW}}</ref> He describes the Stalhorse as running well and being surprisingly comfortable.<ref>{{Cite|The horse made of bones that I rode up in the snowy mountains was surprisingly comfortable to mount.|Baddek|BotW}}</ref><ref>{{Cite|That bony horse ran really well, and it was actually a surprisingly comfortable ride.|Baddek|BotW}}</ref>
+
+Baddek tells {{Term|BotW|Link|link}} that there are four different {{Plural|BotW|Stable|link}} that have different {{Term|BotW|Bridle|link}} and {{Term|BotW|Saddle|link}} styles,<ref>{{Cite|Did you know that some of the stables in Hyrule have slightly different bridle and saddle styles?|Baddek|BotW}}</ref> these being [[Woodland Stable]], [[Highland Stable]], [[Outskirt Stable]], and [[South Akkala Stable]].<ref>{{Cite|I know of four for sure: Woodland Stable, Highland Stable, Outskirt Stable, and South Akkala Stable...|Baddek|BotW}}</ref><ref>{{Cite|I know of four stables in Hyrule that have slightly different bridle and saddle styles: Woodland Stable, Highland Stable, Outskit Stable, and South Akkala Stable.|Baddek|BotW}}</ref> This, however, is false, and these are simply the Stables where Link can have a worker change the gear of his Horses.
+
+When it's raining, Baddek will seek shelter for himself and his horse, commenting that it's raining "like stallions and mares".<ref>{{Cite|It's raining stallions and mares!|Baddek|BotW}}</ref> During this time, he'll give Link a quiz on Horses.<ref>{{Cite|I'm bored and it's raining, so how about I give you a little horse quiz.|Baddek|BotW}}</ref> He lists four different types of Horses—the White Horse, the [[Giant Horse]], the [[Master Cycle Zero|mechanical horse]], and the bone Horse—and asks Link which one doesn't exist.<ref>{{Cite|White horse... Giant horse... Mechanical horse... Bone horse... Now, which of these horses doesn't exist in this world?|Baddek|BotW}}</ref> He says that the answer will be revealed someday, somewhere, and that Link may already know it.<ref>{{Cite|The answer will be revealed someday, somewhere. It may even have already been revealed to you.|Baddek|BotW}}</ref> Occasionally, Baddek will make dismissive comments about the existence of mechanical horses.<ref>{{Cite|Mechanical horses? Bah!|Baddek|BotW}}</ref>
+
+Despite his addiction to Horses, he also wonders about [[Paraglider]]s and {{Plural|BotW|Carrot|link}}.<ref>{{Cite|Paraglider? I wonder...|Baddek|BotW}}</ref><ref>{{Cite|Carrots...|Baddek|BotW}}</ref>
+
+==Nomenclature==
+{{Nomenclature}}
+
+==See Also==
+* [[Nazbi]]
+* [[Savelle]]
+* [[Yammo]]
+* [[Serenne Stable]]
+* [[Breach of Demise]]
+* [[Tabantha Bridge Stable]]
+
+{{Ref}}
+
+{{Categories
+ |Hylians, Hyruleans
+ |characters= BotW
+}}

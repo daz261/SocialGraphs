@@ -11,14 +11,7 @@ MUSIC_FANDOM_URL = "https://music.fandom.com/api.php"
 DATA_PATH = Path('data')
 
 
-def get_links(text):
-    pattern2_addr = re.findall(r".*", text)
-
-    addresses = [p.replace(" ", " ") for p in chain(pattern2_addr)]
-    return addresses
-
-
-def get_all_subcategories(category_name="Category:Artists"):
+def get_all_subcategories(category_name="Category:Artists", base_url=MUSIC_FANDOM_URL):
     payload = {
         'format': 'json',
         'action': 'query',
@@ -27,50 +20,57 @@ def get_all_subcategories(category_name="Category:Artists"):
         'cmtitle': category_name,
         'cmlimit': 'max'
     }
-    responses = repeated_request(payload)
+    responses = repeated_request(payload, base_url=base_url)
     subcategories = [members['title']
                      for r in responses
                      for members in r["query"]['categorymembers']]
     return subcategories
 
 
-def repeated_request(payload):
+def repeated_request(payload, base_url=MUSIC_FANDOM_URL):
     responses = []
     first_time = True
     should_continue = False
     continuation_info = None
+    continue_field = ""
     while first_time or should_continue:
         first_time = False
         if should_continue:
-            payload["cmcontinue"] = continuation_info
-        r = requests.get(MUSIC_FANDOM_URL, params=payload)
+            payload[continue_field] = continuation_info
+        r = requests.get(base_url, params=payload)
         req_json = r.json()
         responses.append(req_json)
 
         should_continue = req_json.get("continue") is not None
         if should_continue:
-            continuation_info = req_json["continue"]["cmcontinue"]
+            if "cmcontinue" in req_json["continue"]:
+                continuation_info = req_json["continue"]["cmcontinue"]
+                continue_field = "cmcontinue"
+            elif "plcontinue" in req_json["continue"]:
+                continuation_info = req_json["continue"]["plcontinue"]
+                continue_field = "plcontinue"
+
     return responses
 
 
-def get_items_from_category(category_name):
+def get_items_from_category(category_name, base_url=MUSIC_FANDOM_URL):
     payload = {
         'format': 'json',
         'action': 'query',
         'list': 'categorymembers',
         'cmtype': 'page',
         'cmtitle': category_name,
-        'cmlimit': 'max'
+        'cmlimit': '100'
     }
 
-    responses = repeated_request(payload)
+    responses = repeated_request(payload, base_url=base_url)
     artists = [members['title']
                for r in responses
                for members in r["query"]['categorymembers']]
     return artists
 
 
-def get_page_content(page_name):
+def get_page_content(page_name, base_url=MUSIC_FANDOM_URL):
     payload = {
         'format': 'json',
         'action': 'query',
@@ -80,7 +80,7 @@ def get_page_content(page_name):
         'rvprop': 'content',
     }
 
-    r = requests.get(MUSIC_FANDOM_URL, params=payload)
+    r = requests.get(base_url, params=payload)
     req_json = r.json()
     pages = [page for _, page in req_json['query']['pages'].items()]
     revisions = [p['revisions'] for p in pages]

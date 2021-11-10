@@ -4,6 +4,8 @@ from project.load_artists import get_page_content, get_items_from_category, get_
 
 
 def main():
+    albums_1995 = get_items_from_category("Category:1995_albums", )
+
     albums = get_items_from_category(category_name="Category:Albums")
     file_names = [a.replace("/", "_") for a in albums]
     dir_path = DATA_PATH / "album_contents"

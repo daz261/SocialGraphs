@@ -2,4 +2,4 @@
 */.ipynb_checkpoints
 project/data/album_contents
 project/data/artist_contents
-project/data
+project/__pycache__

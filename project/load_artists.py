@@ -5,7 +5,7 @@ from project.util import get_items_from_category, DATA_PATH, get_page_content, M
 
 def main():
     # categories_of_artists = get_all_subcategories(category_name="Category:Artists")
-    artists = get_items_from_category(category_name="Category:Artists")
+    artists = get_items_from_category(category_name="Category:Artists", base_url=MUSIC_FANDOM_URL)
     artists_clean = [a.replace("/", "_") for a in artists]
     processed = set(DATA_PATH.glob("*.txt"))
     for clean, artist in tqdm(zip(artists_clean, artists)):
@@ -13,7 +13,7 @@ def main():
         if path in processed: continue
         # print(path)
 
-        content = get_page_content(page_name=artist, MUSIC_FANDOM_URL)
+        content = get_page_content(page_name=artist, base_url=MUSIC_FANDOM_URL)
         with open(path, 'w') as f:
             f.write(content)
 

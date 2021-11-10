@@ -1,4 +1,4 @@
-from project.load_artists import repeated_request
+from ..util import repeated_request
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
@@ -22,14 +22,28 @@ def get_links_from_page(category_name, url):
     return links
 
 
-if __name__ == '__main__':
+def load_table_from_wiki():
     wikipedia_url = "https://en.wikipedia.org/w/api.php"
     # links = get_links_from_page("1990_in_music", wikipedia_url)
     # print(links)
 
     wikiurl = "https://en.wikipedia.org/wiki/1990_in_music"
-    table_class = "wikitable sortable jquery-tablesorter"
+    # table_class = "wikitable sortable jquery-tablesorter"
     response = requests.get(wikiurl)
     soup = BeautifulSoup(response.text, 'html.parser')
     indiatable = soup.find('table', {'class': "wikitable"})
-    df = pd.read_html(str(indiatable))[0]
+    df = pd.read_html(str(indiatable))
+
+
+if __name__ == '__main__':
+    wikipedia_url = "https://en.wikipedia.org/w/api.php"
+    # links = get_links_from_page("1990_in_music", wikipedia_url)
+    # print(links)
+
+    df = pd.read_csv("music_1990.csv")
+    for _, data in df.iterrows():
+        artist = data["Artist"]
+        album = data["Album"]
+        links_artist = get_links_from_page(artist, url=wikipedia_url)
+        links_album = get_links_from_page(album, url=wikipedia_url)
+        print

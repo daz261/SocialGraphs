@@ -14,7 +14,7 @@ pos = None
 
 
 def node_degree_to_size(degree):
-    return 5 + degree ** 2 / 10
+    return 10 + degree ** 1.5 / 20
 
 
 def plot_with_fa(G):
@@ -75,7 +75,7 @@ forceatlas2 = ForceAtlas2(
     strongGravityMode=False,
     gravity=15,
     # # Log
-    verbose=False
+    verbose=True
 )
 
 
@@ -84,14 +84,14 @@ def build_gif(df):
 
     G = build_network(df)
     global pos
-    pos = forceatlas2.forceatlas2_networkx_layout(G, pos=None, iterations=1)
-    node_label = {k: k for k, d in dict(G.degree).items() if d > 90}
+    pos = forceatlas2.forceatlas2_networkx_layout(G, pos=None, iterations=15000)
+    node_label = {k: k for k, d in dict(G.degree).items() if d > 50}
     node_size = [node_degree_to_size(d) for k, d in dict(G.degree).items()]
 
     plt.rcParams["figure.figsize"] = (20, 20)
-    frames = 500
-    interval = 130
-    steps_per_iteration = 500
+    frames = 100
+    interval = 100
+    steps_per_iteration = 1
 
     def update(data):
         print(f"{1 + data} / {frames}")
@@ -112,7 +112,7 @@ def build_gif(df):
                                              interval=interval,
                                              repeat=False,
                                              blit=False)
-    ani.save(str(DATA_PATH / "full.gif"))
+    ani.save(str(DATA_PATH / "full2.gif"))
 
 
 def main():

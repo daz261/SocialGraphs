@@ -1,2 +1,5 @@
 .venv
 */.ipynb_checkpoints
+project/data/album_contents
+project/data/artist_contents
+project/__pycache__

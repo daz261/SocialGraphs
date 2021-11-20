@@ -68,12 +68,15 @@ def get_node_features(df) -> dict:
     Extracts summary values from the dataframe to a node
     """
     feature_dict = {}
-
-    genres = []
-    for genre_string in df["Genre"].to_list():
-        genre_list = ast.literal_eval(genre_string)
-        genres.extend(genre_list[0])
-    genre_dict = {g.lower(): True for g in genres}
+    try:
+        if df["Genre"]:
+            genres = []
+            for genre_string in df["Genre"].to_list():
+                genre_list = ast.literal_eval(genre_string)
+                genres.extend(genre_list[0])
+            genre_dict = {g.lower(): True for g in genres}
+    except Exception as e:
+        print("TODO: fix genre parsing. Look out for nan")
     return feature_dict
 
 
@@ -83,6 +86,7 @@ def get_edge_features(df) -> dict:
     """
 
     return {}
+
 
 # TODO: accumulate node features per node and only then add them
 def construct_graph(pairs_df):

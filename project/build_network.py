@@ -1,6 +1,7 @@
 import networkx as nx
 import pandas as pd
 
+from project.network_enhancements import add_node_degrees, add_community_id
 from project.util import DATA_PATH
 import ast
 
@@ -18,20 +19,12 @@ month_to_ordinal = {'JANUARY': "01",
                     'DECEMBER': "12"}
 
 
-def build_network(df):
-    df["Artist references"] = df["Artist references"].apply(ast.literal_eval)
-    G = nx.Graph()
-    for _, row in df.iterrows():
-        references = row["Artist references"]
-        artist = row["Artist"]
-        edges_to_add = [(artist, ref) for ref in references if ref != artist]
-        G.add_edges_from(edges_to_add)
-    return G
-
-
 def is_row_necessary(row) -> bool:
+    if row["Artist"] == row["Album"]: return False  # Ugly quick fix. We should rerun files
     if row["Artist"] == "Various Artists": return False
     if "remix" in str(row["Notes"]).lower(): return False
+    if "box set" in str(row["Notes"]).lower():
+        return False
     if "compilation" in str(row["Notes"]).lower(): return False
     return True
 
@@ -58,11 +51,12 @@ def preprocess_df():
     collaboration_df["Artist references"] = df_matches["Artist references"].apply(ast.literal_eval)
     collaboration_df["Date"] = collaboration_df.apply(parse_year, axis=1)
     collaboration_df = collaboration_df.drop(columns=["Year", "Date.1"])
-    return collaboration_df[collaboration_df.apply(is_row_necessary, axis=1)]
+    collaboration_df = collaboration_df[collaboration_df.apply(is_row_necessary, axis=1)]
+    return collaboration_df
 
 
 def prepare_pairs(collaboration_df):
-    # pd.explode changes each element in list to a new row
+    # DataFrame.explode changes each element in list to a new row
     pairs_df = collaboration_df.explode("Artist references", ignore_index=True)
     pairs_df = pairs_df.dropna(subset=["Artist references"])  # I've found some empty values in artist references
     pairs_df = pairs_df[pairs_df["Artist"] != pairs_df["Artist references"]]
@@ -70,13 +64,27 @@ def prepare_pairs(collaboration_df):
 
 
 def get_node_features(df) -> dict:
-    return {}
+    """
+    Extracts summary values from the dataframe to a node
+    """
+    feature_dict = {}
+
+    genres = []
+    for genre_string in df["Genre"].to_list():
+        genre_list = ast.literal_eval(genre_string)
+        genres.extend(genre_list[0])
+    genre_dict = {g.lower(): True for g in genres}
+    return feature_dict
 
 
 def get_edge_features(df) -> dict:
+    """
+    Extracts summary values from the dataframe to an edge
+    """
+
     return {}
 
-
+# TODO: accumulate node features per node and only then add them
 def construct_graph(pairs_df):
     G = nx.DiGraph()
     for artists, df in pairs_df.groupby(["Artist", "Artist references"]):
@@ -91,16 +99,24 @@ def construct_graph(pairs_df):
     return G
 
 
-def build_network2():
+def enhance_network(G):
+    G = add_node_degrees(G)
+    G = add_community_id(G)
+    return G
+
+
+def build_network():
     collaboration_df = preprocess_df()
     pairs_df = prepare_pairs(collaboration_df)
     G = construct_graph(pairs_df)
+    G = enhance_network(G)
     return G
 
 
 def main():
-    G = build_network2()
+    G = build_network()
     nx.write_gpickle(G, "G.pickle")
+
 
 if __name__ == '__main__':
     main()

@@ -4,15 +4,15 @@ from project.util import load_table_from_wiki, DATA_PATH, get_links_from_page, W
     MUSIC_FANDOM_URL
 
 if __name__ == '__main__':
-    # years = [str(y) for y in range(1990, 2000)]
-    # dataframes = []
-    # for year in years:
-    #     df = load_table_from_wiki(page_name=f"{year}_in_music")
-    #     dataframes.append(df)
-    # big_df = pd.concat(dataframes).reset_index()
-    # big_df = big_df.drop(labels=["index"], axis=1)
+    years = [str(y) for y in range(1990, 2000)]
+    dataframes = []
+    for year in years:
+        df = load_table_from_wiki(page_name=f"{year}_in_music")
+        dataframes.append(df)
+    big_df = pd.concat(dataframes).reset_index()
+    big_df = big_df.drop(labels=["index"], axis=1)
     # big_df = big_df.dropna(axis=0, subset=["Album link"])
-    # big_df.to_csv(DATA_PATH / "album_artist_date_table.csv", index=False)
+    big_df.to_csv(DATA_PATH / "album_artist_date_table.csv", index=False)
 
     big_df = pd.read_csv("data/album_artist_date_table.csv")
     artists = get_items_from_category(category_name="Category:Artists", base_url=MUSIC_FANDOM_URL)

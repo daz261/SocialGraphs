@@ -5,8 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0a4b14f-ff3a-4af7-a894-86c5b8511f11" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Load_Spotify_Data.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spotify.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/data_collection/async_fetching.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/data_collection/async_wiki_fetching.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/data_collection/wiki_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/graph_building/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/graph_building/feature_extractor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/spotify/album_ids_list.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/spotify/get_spotify_access.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/spotify/get_spotify_environment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/spotify/load_spotify_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/spotify/spotify_albums.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/spotify/spotify_keys.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_14_21,_10_30_AM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_14_21__10_30_AM__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/build_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/build_network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/G.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/project/G.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/build_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/graph_building/build_network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/load_artist_attributes.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/graph_building/load_artist_attributes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/load_artists.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/graph_building/load_artists.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/load_artists_wikipedia.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/graph_building/load_artists_wikipedia.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/network_enhancements.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/graph_building/network_enhancements.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/util.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,12 +76,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/project/data_collection" />
+      <recent name="$PROJECT_DIR$/project/graph_building" />
       <recent name="$PROJECT_DIR$/project" />
       <recent name="$PROJECT_DIR$/project/data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.build_network">
+  <component name="RunManager" selected="Python.load_spotify_data">
     <configuration name="build_network" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SocialGraphs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -74,29 +100,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/build_network.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="load_albums" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="SocialGraphs" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/load_albums.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/graph_building/build_network.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -118,7 +122,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/load_artist_attributes.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/graph_building/load_artist_attributes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -141,6 +145,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/load_artist_attributes2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="load_spotify_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SocialGraphs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project/spotify" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/spotify/load_spotify_data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -173,18 +199,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.build_network" />
-      <item itemvalue="Python.load_albums" />
       <item itemvalue="Python.load_artist_attributes" />
       <item itemvalue="Python.load_artist_attributes2" />
       <item itemvalue="Python.prepare_input" />
+      <item itemvalue="Python.load_spotify_data" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.load_spotify_data" />
         <item itemvalue="Python.build_network" />
         <item itemvalue="Python.prepare_input" />
         <item itemvalue="Python.load_artist_attributes2" />
         <item itemvalue="Python.load_artist_attributes" />
-        <item itemvalue="Python.load_albums" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +231,12 @@
       <workItem from="1637077027293" duration="2603000" />
       <workItem from="1637081777286" duration="8702000" />
       <workItem from="1637165976299" duration="4148000" />
-      <workItem from="1637420071526" duration="23119000" />
+      <workItem from="1637420071526" duration="25355000" />
+      <workItem from="1637516187475" duration="1200000" />
+      <workItem from="1637663782903" duration="1213000" />
+      <workItem from="1637668296373" duration="1223000" />
+      <workItem from="1637684108878" duration="322000" />
+      <workItem from="1637744245613" duration="25299000" />
     </task>
     <servers />
   </component>
@@ -233,34 +264,29 @@
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/project/util.py</url>
-          <line>126</line>
+          <url>file://$PROJECT_DIR$/project/data_collection/wiki_util.py</url>
+          <line>121</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/project/util.py</url>
-          <line>33</line>
+          <url>file://$PROJECT_DIR$/project/data_collection/wiki_util.py</url>
+          <line>28</line>
           <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/project/load_artist_attributes.py</url>
+          <url>file://$PROJECT_DIR$/project/graph_building/load_artist_attributes.py</url>
           <line>56</line>
           <option name="timeStamp" value="128" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/project/util.py</url>
-          <line>90</line>
+          <url>file://$PROJECT_DIR$/project/data_collection/wiki_util.py</url>
+          <line>85</line>
           <option name="timeStamp" value="133" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/project/util.py</url>
-          <line>100</line>
+          <url>file://$PROJECT_DIR$/project/data_collection/wiki_util.py</url>
+          <line>95</line>
           <option name="timeStamp" value="134" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/project/build_network.py</url>
-          <line>156</line>
-          <option name="timeStamp" value="142" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/project/predictor/prepare_input.py</url>
@@ -268,9 +294,14 @@
           <option name="timeStamp" value="162" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/project/network_enhancements.py</url>
+          <url>file://$PROJECT_DIR$/project/graph_building/network_enhancements.py</url>
           <line>16</line>
           <option name="timeStamp" value="173" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/project/spotify/load_spotify_data.py</url>
+          <line>119</line>
+          <option name="timeStamp" value="212" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -283,17 +314,18 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SocialGraphs$build_network.coverage" NAME="build_network Coverage Results" MODIFIED="1637449975476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$build_network.coverage" NAME="build_network Coverage Results" MODIFIED="1637751103945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/" />
     <SUITE FILE_PATH="coverage/SocialGraphs$network_gif_example.coverage" NAME="network_gif_example Coverage Results" MODIFIED="1636915469692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
     <SUITE FILE_PATH="coverage/SocialGraphs$load_albums.coverage" NAME="load_albums Coverage Results" MODIFIED="1637143301222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
-    <SUITE FILE_PATH="coverage/SocialGraphs$prepare_input.coverage" NAME="prepare_input Coverage Results" MODIFIED="1637442653131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/predictor" />
     <SUITE FILE_PATH="coverage/SocialGraphs$load_artist_attributes2.coverage" NAME="load_artist_attributes2 Coverage Results" MODIFIED="1637168062575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
     <SUITE FILE_PATH="coverage/SocialGraphs$load_artists_recurrent.coverage" NAME="load_artists_recurrent Coverage Results" MODIFIED="1636549798398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
     <SUITE FILE_PATH="coverage/SocialGraphs$load_artist_attributes.coverage" NAME="load_artist_attributes Coverage Results" MODIFIED="1637166729061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$loads_albums_wikipedia.coverage" NAME="loads_albums_wikipedia Coverage Results" MODIFIED="1636541609612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/data" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$load_artists_wikipedia.coverage" NAME="load_artists_wikipedia Coverage Results" MODIFIED="1636556060149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/data" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$prepare_input.coverage" NAME="prepare_input Coverage Results" MODIFIED="1637442653131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/predictor" />
     <SUITE FILE_PATH="coverage/SocialGraphs$build_network__1_.coverage" NAME="build_network Coverage Results" MODIFIED="1637433943194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/" />
     <SUITE FILE_PATH="coverage/SocialGraphs$create_network_gif.coverage" NAME="create_network_gif Coverage Results" MODIFIED="1636989696235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
     <SUITE FILE_PATH="coverage/SocialGraphs$load_data.coverage" NAME="load_artists Coverage Results" MODIFIED="1636322695396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
-    <SUITE FILE_PATH="coverage/SocialGraphs$loads_albums_wikipedia.coverage" NAME="loads_albums_wikipedia Coverage Results" MODIFIED="1636541609612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/data" />
-    <SUITE FILE_PATH="coverage/SocialGraphs$load_artists_wikipedia.coverage" NAME="load_artists_wikipedia Coverage Results" MODIFIED="1636556060149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/data" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$load_spotify_data.coverage" NAME="load_spotify_data Coverage Results" MODIFIED="1637773696717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/spotify" />
   </component>
 </project>

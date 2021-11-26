@@ -5,29 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0a4b14f-ff3a-4af7-a894-86c5b8511f11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Load_Spotify_Data.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spotify.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/data_collection/async_fetching.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/data_collection/async_wiki_fetching.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/data_collection/wiki_util.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/graph_building/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/graph_building/feature_extractor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/spotify/album_ids_list.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/spotify/get_spotify_access.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/spotify/get_spotify_environment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/spotify/load_spotify_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/spotify/spotify_albums.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/spotify/spotify_keys.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_14_21,_10_30_AM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_14_21__10_30_AM__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/G.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/project/G.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/build_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/graph_building/build_network.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/load_artist_attributes.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/graph_building/load_artist_attributes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/load_artists.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/graph_building/load_artists.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/load_artists_wikipedia.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/graph_building/load_artists_wikipedia.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/network_enhancements.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/graph_building/network_enhancements.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/data/collaboration_clean.csv" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/collaboration_clean.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/graph_building/build_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/graph_building/build_network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/spotify/.cache" beforeDir="false" afterPath="$PROJECT_DIR$/project/spotify/.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/spotify/spotify_final.csv" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/spotify_final.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,13 +64,13 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/project/data" />
       <recent name="$PROJECT_DIR$/project/data_collection" />
       <recent name="$PROJECT_DIR$/project/graph_building" />
       <recent name="$PROJECT_DIR$/project" />
-      <recent name="$PROJECT_DIR$/project/data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.load_spotify_data">
+  <component name="RunManager" selected="Python.build_network">
     <configuration name="build_network" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SocialGraphs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -206,8 +190,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.load_spotify_data" />
         <item itemvalue="Python.build_network" />
+        <item itemvalue="Python.load_spotify_data" />
         <item itemvalue="Python.prepare_input" />
         <item itemvalue="Python.load_artist_attributes2" />
         <item itemvalue="Python.load_artist_attributes" />
@@ -237,6 +221,8 @@
       <workItem from="1637668296373" duration="1223000" />
       <workItem from="1637684108878" duration="322000" />
       <workItem from="1637744245613" duration="25299000" />
+      <workItem from="1637857735979" duration="1074000" />
+      <workItem from="1637922525477" duration="3280000" />
     </task>
     <servers />
   </component>
@@ -303,6 +289,11 @@
           <line>119</line>
           <option name="timeStamp" value="212" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/project/graph_building/build_network.py</url>
+          <line>118</line>
+          <option name="timeStamp" value="224" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -314,7 +305,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SocialGraphs$build_network.coverage" NAME="build_network Coverage Results" MODIFIED="1637751103945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$build_network.coverage" NAME="build_network Coverage Results" MODIFIED="1637925749373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/" />
     <SUITE FILE_PATH="coverage/SocialGraphs$network_gif_example.coverage" NAME="network_gif_example Coverage Results" MODIFIED="1636915469692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
     <SUITE FILE_PATH="coverage/SocialGraphs$load_albums.coverage" NAME="load_albums Coverage Results" MODIFIED="1637143301222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
     <SUITE FILE_PATH="coverage/SocialGraphs$load_artist_attributes2.coverage" NAME="load_artist_attributes2 Coverage Results" MODIFIED="1637168062575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
@@ -326,6 +317,6 @@
     <SUITE FILE_PATH="coverage/SocialGraphs$build_network__1_.coverage" NAME="build_network Coverage Results" MODIFIED="1637433943194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/" />
     <SUITE FILE_PATH="coverage/SocialGraphs$create_network_gif.coverage" NAME="create_network_gif Coverage Results" MODIFIED="1636989696235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
     <SUITE FILE_PATH="coverage/SocialGraphs$load_data.coverage" NAME="load_artists Coverage Results" MODIFIED="1636322695396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
-    <SUITE FILE_PATH="coverage/SocialGraphs$load_spotify_data.coverage" NAME="load_spotify_data Coverage Results" MODIFIED="1637773696717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/spotify" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$load_spotify_data.coverage" NAME="load_spotify_data Coverage Results" MODIFIED="1637922621373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/spotify" />
   </component>
 </project>

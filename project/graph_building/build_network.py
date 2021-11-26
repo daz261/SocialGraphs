@@ -52,6 +52,17 @@ def preprocess_df():
     collaboration_df["Date"] = collaboration_df.apply(parse_year, axis=1)
     collaboration_df = collaboration_df.drop(columns=["Year", "Date.1"])
     collaboration_df = collaboration_df[collaboration_df.apply(is_row_necessary, axis=1)]
+
+    spotify_df = pd.read_csv(DATA_PATH / "spotify_final.csv")
+    collaboration_df = pd.merge(collaboration_df, spotify_df,
+                                right_on=["album", "artist"],
+                                left_on=["Album", "Artist"])
+
+    billboard_df = pd.read_csv(DATA_PATH / "billboard_df.csv",
+                               usecols=["Album", "Artist", "last_week", "weeks_on_chart", "peak_rank"])
+    collaboration_df = pd.merge(collaboration_df, billboard_df,
+                                on=["Album", "Artist"])
+
     return collaboration_df
 
 
@@ -71,17 +82,39 @@ def get_edge_features(df) -> dict:
     return {}
 
 
-# TODO: accumulate node features per node and only then add them
-def construct_graph(pairs_df):
+audio_feature_names = ['danceability', 'energy', 'loudness', 'mode', 'speechiness', 'acousticness',
+                       'instrumentalness', 'liveness', 'valence', 'tempo']
+
+
+def get_node_features(album_df, artist1):
+    sub_df = album_df[album_df["Artist"] == artist1]
+    features_dict = {feature_name: round(sub_df[feature_name].mean(), 4) for feature_name in audio_feature_names}
+    genres = list({g
+                   for row in {row for row in sub_df["Genre"] if isinstance(row, str)}
+                   for genres in ast.literal_eval(row)
+                   for g in genres})
+
+    features_dict["genres"] = genres
+    features_dict["peak_rank"] = sub_df["peak_rank"].max()
+    features_dict["weeks_on_chart"] = sub_df["weeks_on_chart"].sum()
+    features_dict["last_week"] = sub_df["last_week"].min()
+
+    return features_dict
+
+
+def construct_graph(pairs_df, album_df):
     G = nx.DiGraph()
+    artist_with_node_features = set()
+
     for artists, df in pairs_df.groupby(["Artist", "Artist references"]):
         artist1, artist2 = artists
         weight = len(df)
-        node_features = {}  # get_node_features(df)
-        edge_features = {}  # get_edge_features(df)
+        edge_features = get_edge_features(df)
 
-        if artist1 not in G.nodes:
+        if artist1 not in artist_with_node_features:
+            node_features = get_node_features(album_df, artist1)
             G.add_node(artist1, **node_features)
+            artist_with_node_features.add(artist1)
         G.add_edge(artist1, artist2, weight=weight, **edge_features)
     return G
 
@@ -96,7 +129,7 @@ def build_network():
     collaboration_df = preprocess_df()
     collaboration_df.to_csv(DATA_PATH / "collaboration_clean.csv", index=False)
     pairs_df = prepare_pairs(collaboration_df)
-    G = construct_graph(pairs_df)
+    G = construct_graph(pairs_df, collaboration_df)
     G = enhance_network(G)
     return G
 

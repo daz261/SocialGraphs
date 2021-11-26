@@ -6,7 +6,7 @@ def add_node_degrees(G: nx.DiGraph) -> nx.DiGraph:
     in_degrees = {node: G.in_degree(node) for node in G.nodes()}
     out_degrees = {node: G.out_degree(node) for node in G.nodes()}
     nx.set_node_attributes(G, in_degrees, "in_degree")
-    nx.set_node_attributes(G, out_degrees, "out_degrees")
+    nx.set_node_attributes(G, out_degrees, "out_degree")
     return G
 
 

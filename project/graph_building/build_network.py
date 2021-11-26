@@ -115,6 +115,12 @@ def construct_graph(pairs_df, album_df):
             node_features = get_node_features(album_df, artist1)
             G.add_node(artist1, **node_features)
             artist_with_node_features.add(artist1)
+
+        if artist2 not in artist_with_node_features:
+            node_features = get_node_features(album_df, artist2)
+            G.add_node(artist2, **node_features)
+            artist_with_node_features.add(artist2)
+
         G.add_edge(artist1, artist2, weight=weight, **edge_features)
     return G
 

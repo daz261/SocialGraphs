@@ -9,12 +9,11 @@ from project.graph_building.build_network import audio_feature_names
 #  'genres': ['Comedy', 'parody'], 'peak_rank': 71, 'weeks_on_chart': 36, 'last_week': 4.0, 'in_degree': 4,
 #  'out_degree': 75, 'partition_id': 0}
 
-
 def prepare_input(node_name1, node_name2, node_to_attr, G):
-    global  count
     attr1 = node_to_attr[node_name1]
     attr2 = node_to_attr[node_name2]
-
+    if str(attr2["danceability"]) == 'nan':
+        print()
     feature_dict = {}
     feature_dict["are_neighbors"] = int(node2 in G.neighbors(node1))
     feature_dict["same_partition"] = int(

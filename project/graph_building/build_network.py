@@ -71,6 +71,10 @@ def prepare_pairs(collaboration_df):
     pairs_df = collaboration_df.explode("Artist references", ignore_index=True)
     pairs_df = pairs_df.dropna(subset=["Artist references"])  # I've found some empty values in artist references
     pairs_df = pairs_df[pairs_df["Artist"] != pairs_df["Artist references"]]
+
+    # pairs_df2 = collaboration_df.explode("collaborations", ignore_index=True)
+    # pairs_df2 = pairs_df2.dropna(subset=["collaborations"])  # I've found some empty values in artist references
+    # pairs_df2 = pairs_df[pairs_df["Artist"] != pairs_df["Artist references"]]
     return pairs_df.reset_index(drop=True)
 
 
@@ -86,9 +90,10 @@ audio_feature_names = ['danceability', 'energy', 'loudness', 'mode', 'speechines
                        'instrumentalness', 'liveness', 'valence', 'tempo']
 
 
-def get_node_features(album_df, artist1):
-    sub_df = album_df[album_df["Artist"] == artist1]
-    features_dict = {feature_name: round(sub_df[feature_name].mean(), 4) for feature_name in audio_feature_names}
+def get_node_features(pairs_df, artist):
+    sub_df = pairs_df[(pairs_df["Artist"] == artist) | (pairs_df["Artist references"] == artist)]
+    features_dict = {feature_name: round(sub_df[~sub_df[feature_name].isnull()][feature_name].mean(), 4) for
+                     feature_name in audio_feature_names}
     genres = list({g
                    for row in {row for row in sub_df["Genre"] if isinstance(row, str)}
                    for genres in ast.literal_eval(row)
@@ -112,12 +117,12 @@ def construct_graph(pairs_df, album_df):
         edge_features = get_edge_features(df)
 
         if artist1 not in artist_with_node_features:
-            node_features = get_node_features(album_df, artist1)
+            node_features = get_node_features(pairs_df, artist1)
             G.add_node(artist1, **node_features)
             artist_with_node_features.add(artist1)
 
         if artist2 not in artist_with_node_features:
-            node_features = get_node_features(album_df, artist2)
+            node_features = get_node_features(pairs_df, artist2)
             G.add_node(artist2, **node_features)
             artist_with_node_features.add(artist2)
 

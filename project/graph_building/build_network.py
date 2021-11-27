@@ -98,7 +98,7 @@ def get_node_features(pairs_df, artist):
                    for g in genres})
 
     features_dict["genres"] = genres
-    features_dict["peak_rank"] = sub_df["peak_rank"].max()
+    features_dict["peak_rank"] = sub_df["peak_rank"].min()
     features_dict["weeks_on_chart"] = sub_df["weeks_on_chart"].sum()
     features_dict["last_week"] = sub_df["last_week"].min()
 

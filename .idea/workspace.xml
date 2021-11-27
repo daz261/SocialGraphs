@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e0a4b14f-ff3a-4af7-a894-86c5b8511f11" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/data/collaboration_clean.csv" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/collaboration_clean.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/data_collection/wiki_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/data_collection/wiki_util.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/graph_building/build_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/graph_building/build_network.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/graph_building/load_artists_wikipedia.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/graph_building/load_artists_wikipedia.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/predictor/prepare_input.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/predictor/prepare_input.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/predictor/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/predictor/train.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +218,7 @@
       <workItem from="1637744245613" duration="25299000" />
       <workItem from="1637857735979" duration="1074000" />
       <workItem from="1637922525477" duration="19581000" />
-      <workItem from="1638020046048" duration="10680000" />
+      <workItem from="1638020046048" duration="11482000" />
     </task>
     <servers />
   </component>

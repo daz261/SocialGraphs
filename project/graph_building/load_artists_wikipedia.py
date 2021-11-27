@@ -1,7 +1,7 @@
 import pandas as pd
 
-from project.data_collection.wiki_util import load_table_from_wiki, DATA_PATH, get_items_from_category, WIKIPEDIA_URL, \
-    MUSIC_FANDOM_URL, get_links_from_page
+from project.data_collection.wiki_util import load_table_from_wiki, get_items_from_category, get_links_from_page
+from project.util import MUSIC_FANDOM_URL, DATA_PATH, WIKIPEDIA_URL
 
 if __name__ == '__main__':
     years = [str(y) for y in range(1990, 2000)]

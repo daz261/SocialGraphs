@@ -1,6 +1,4 @@
-import os
 from itertools import chain
-from pathlib import Path
 import urllib.parse
 
 import pandas as pd

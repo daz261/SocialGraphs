@@ -24,7 +24,7 @@ def prepare_input(node_name1, node_name2, node_to_attr, G):
 
     feature_dict["in_degree_diff"] = int(attr1["in_degree"] - attr2["in_degree"])
     feature_dict["out_degree_diff"] = int(attr1["out_degree"] - attr2["out_degree"])
-    feature_dict["genre_overlap"] = len(set(attr1.get("genres", [])).intersection(attr2.get("genres", [])))
+    # feature_dict["genre_overlap"] = len(set(attr1.get("genres", [])).intersection(attr2.get("genres", [])))
 
     weeks_on_chart1 = attr1["weeks_on_chart"] if attr1["weeks_on_chart"] else 0
     weeks_on_chart2 = attr2["weeks_on_chart"] if attr2["weeks_on_chart"] else 0
@@ -39,7 +39,7 @@ def prepare_input(node_name1, node_name2, node_to_attr, G):
     for feature in audio_feature_names:
         feature_dict[f"{feature}_diff"] = abs(attr1[feature] - attr2[feature])
 
-    features_list = list(sorted(feature_dict.items(), key=lambda d: d[0]))
+    features_list = list(feature_dict.items())
     features_only = np.array([v for k, v in features_list])
     names_only = np.array([k for k, v in features_list])
     return features_only, names_only

@@ -109,10 +109,13 @@ def get_node_features(pairs_df, artist):
     features_dict["weeks_on_chart"] = sub_df["weeks_on_chart"].sum()
     features_dict["last_week"] = sub_df["last_week"].min()
 
+    if "sentiment" in sub_df.columns:
+        features_dict["sentiment"] = sub_df["sentiment"].mean()
+
     return features_dict
 
 
-def construct_graph(pairs_df, album_df):
+def construct_graph(pairs_df):
     G = nx.DiGraph()
     artist_with_node_features = set()
 
@@ -145,7 +148,7 @@ def build_network(date_range=None, sentiment=False):
     collaboration_df = preprocess_df(date_range, sentiment)
     collaboration_df.to_csv(DATA_PATH / "collaboration_clean.csv", index=False)
     pairs_df = prepare_pairs(collaboration_df)
-    G = construct_graph(pairs_df, collaboration_df)
+    G = construct_graph(pairs_df)
     G = enhance_network(G)
     return G
 

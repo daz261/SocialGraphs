@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0a4b14f-ff3a-4af7-a894-86c5b8511f11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/project/data/Data_Set_S1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/sentiment_analysis/analysis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/data/collaboration_clean.csv" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/collaboration_clean.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/G_sentiment.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/project/G_sentiment.pickle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/graph_building/build_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/graph_building/build_network.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -317,11 +315,6 @@
           <line>47</line>
           <option name="timeStamp" value="337" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/project/graph_building/build_network.py</url>
-          <line>67</line>
-          <option name="timeStamp" value="338" />
-        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -333,7 +326,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SocialGraphs$build_network.coverage" NAME="build_network Coverage Results" MODIFIED="1638364405926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$build_network.coverage" NAME="build_network Coverage Results" MODIFIED="1638366318125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/" />
     <SUITE FILE_PATH="coverage/SocialGraphs$network_gif_example.coverage" NAME="network_gif_example Coverage Results" MODIFIED="1636915469692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
     <SUITE FILE_PATH="coverage/SocialGraphs$load_albums.coverage" NAME="load_albums Coverage Results" MODIFIED="1637143301222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
     <SUITE FILE_PATH="coverage/SocialGraphs$load_artist_attributes2.coverage" NAME="load_artist_attributes2 Coverage Results" MODIFIED="1637168062575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />

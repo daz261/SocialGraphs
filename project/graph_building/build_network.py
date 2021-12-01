@@ -44,7 +44,7 @@ def parse_year(row):
     return date
 
 
-def preprocess_df(date_range=None):
+def preprocess_df(date_range=None, sentiment=False):
     collaboration_df = pd.read_csv(DATA_PATH / "attributes_album_artist_date_table_v2.csv")
     collaboration_df = collaboration_df.drop(columns=["Unnamed: 0.1", "Unnamed: 0"])
     df_matches = pd.read_csv(DATA_PATH / "updated_artist_matches.csv")
@@ -62,6 +62,13 @@ def preprocess_df(date_range=None):
                                usecols=["Album", "Artist", "last_week", "weeks_on_chart", "peak_rank"])
     collaboration_df = pd.merge(collaboration_df, billboard_df,
                                 on=["Album", "Artist"])
+
+    if sentiment:
+        sentiment_df = pd.read_csv(DATA_PATH / "album_to_sentiment.csv")
+        collaboration_df = pd.merge(sentiment_df[["album", "artist", "sentiment"]],
+                                    collaboration_df,
+                                    left_on=["album", "artist"], right_on=["Album", "Artist"])
+
     if date_range is not None:
         collaboration_df = collaboration_df[collaboration_df["Date"].isin(date_range)]
 
@@ -134,8 +141,8 @@ def enhance_network(G):
     return G
 
 
-def build_network(date_range=None):
-    collaboration_df = preprocess_df(date_range)
+def build_network(date_range=None, sentiment=False):
+    collaboration_df = preprocess_df(date_range, sentiment)
     collaboration_df.to_csv(DATA_PATH / "collaboration_clean.csv", index=False)
     pairs_df = prepare_pairs(collaboration_df)
     G = construct_graph(pairs_df, collaboration_df)
@@ -144,8 +151,8 @@ def build_network(date_range=None):
 
 
 def main():
-    G = build_network()
-    nx.write_gpickle(G, "G.pickle")
+    G = build_network(sentiment=True)
+    nx.write_gpickle(G, "G_sentiment.pickle")
 
 
 if __name__ == '__main__':

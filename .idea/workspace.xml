@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0a4b14f-ff3a-4af7-a894-86c5b8511f11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/project/basic_analysis/network_analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/build_network.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/project/build_network.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/data/collaboration_clean.csv" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/collaboration_clean.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/predictor/prepare_input.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/predictor/prepare_input.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/basic_analysis/Analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/project/basic_analysis/Analysis.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

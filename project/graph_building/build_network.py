@@ -52,7 +52,6 @@ def preprocess_df(date_range=None, sentiment=False):
     collaboration_df["Date"] = collaboration_df.apply(parse_year, axis=1)
     collaboration_df = collaboration_df.drop(columns=["Year", "Date.1"])
     collaboration_df = collaboration_df[collaboration_df.apply(is_row_necessary, axis=1)]
-
     spotify_df = pd.read_csv(DATA_PATH / "spotify_final.csv")
     collaboration_df = pd.merge(collaboration_df, spotify_df,
                                 right_on=["album", "artist"],
@@ -68,7 +67,7 @@ def preprocess_df(date_range=None, sentiment=False):
         collaboration_df = pd.merge(sentiment_df[["album", "artist", "sentiment"]],
                                     collaboration_df,
                                     left_on=["album", "artist"], right_on=["Album", "Artist"])
-
+        collaboration_df = collaboration_df.dropna(axis=0)
     if date_range is not None:
         collaboration_df = collaboration_df[collaboration_df["Date"].isin(date_range)]
 

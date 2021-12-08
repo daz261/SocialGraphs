@@ -29,7 +29,7 @@ path_txts = os.path.join(script_dir, folder_dir)
 # Define set of stopwords in english
 stopWords = set(stopwords.words('english'))
 
-G = nx.read_gpickle(script_dir + "/graph_building/G.pickle")
+G = nx.read_gpickle(os.path.join(script_dir,"G_wordclouds.pickle"))
 # Extract the largest component LC
 LC = max(nx.weakly_connected_components(G),key=len)
 # Save only the largest component as G

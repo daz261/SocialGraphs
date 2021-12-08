@@ -10,6 +10,7 @@ import nltk
 from nltk.corpus import stopwords
 from os.path import isfile, join
 import regex as re
+from scipy.stats import pearsonr
 from tqdm import tqdm
 from community import community_louvain
 import networkx as nx
@@ -19,11 +20,12 @@ import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 #from textblob import TextBlob
 import json
+import seaborn as sns
 
-
+import numpy as np
 # save the path of the wiki texts
 script_dir = os.path.dirname(os.path.abspath(__file__))
-folder_dir = "data\\lyrics\\"
+folder_dir = "data/lyrics/"
 path_txts = os.path.join(script_dir, folder_dir)
 
 # Define set of stopwords in english
@@ -42,7 +44,7 @@ partition = community_louvain.best_partition(G_u)
 with open(script_dir+'\\data\\louvain_partition.txt','w') as x:
         json.dump(partition,x)
 """
-with open(os.path.join(script_dir,'data\\louvain_partition.txt'),'r') as x:
+with open(os.path.join(script_dir,'data/louvain_partition.txt'),'r') as x:
         partition = json.load(x)
         
 def get_file_names(path_txts = path_txts):
@@ -200,6 +202,8 @@ def plot_wordclouds(Category,TCIDF,unique_races,mask=None):
             plt.axis('off')
             plt.title(f'{Category}: {race}', fontdict = {'fontsize' : 20})
             plt.show()
+
+
 
 def main():
     """

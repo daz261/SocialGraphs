@@ -1,6 +1,6 @@
 import sys
 from os import listdir
-from statistics import LinearRegression
+
 from typing import List
 import matplotlib
 import matplotlib.pyplot as plt
@@ -12,6 +12,7 @@ import scipy as sp
 import tqdm
 from bs4 import BeautifulSoup
 from community import community_louvain
+from sklearn.linear_model import LinearRegression
 # from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from nltk.sentiment import SentimentIntensityAnalyzer
 from nltk.stem import WordNetLemmatizer
@@ -33,9 +34,12 @@ import regex as re
 from tqdm import tqdm
 import seaborn as sns
 #reference to code file
-from Spotify.get_spotify_access import refresh_spotify_access
+
+#UNCOMMENT
+#from project.spotify.get_spotify_access import refresh_spotify_access
 # save the path of the wiki texts
 script_dir = os.getcwd()
+
 sys.setrecursionlimit(3000)
 
 
@@ -220,6 +224,15 @@ def show_bar_plot_dual(df, sentiment_source, sentiment_source2, ylim=None):
 
 # Function to find 3 most connected nodes within a partition and concatenating them to obtain a partition name
 def partition_to_top3_names(G, node_to_partition_id, partition_id):
+    nodes_in_partition = [node for node in G.nodes()
+                          if node_to_partition_id[node] == partition_id]
+    sub_G = G.subgraph(nodes_in_partition)
+    node_to_connectivity = [(node, sub_G.degree(node)) for node in sub_G.nodes()]
+    top3_nodes = sorted(node_to_connectivity, key=lambda t: t[1], reverse=True)[:3]
+    return ", ".join([n for n, _ in top3_nodes])
+
+# Function to find 3 most connected nodes within a partition and concatenating them to obtain a partition name
+def partition_to_top3_genre(G, node_to_partition_id, partition_id):
     nodes_in_partition = [node for node in G.nodes()
                           if node_to_partition_id[node] == partition_id]
     sub_G = G.subgraph(nodes_in_partition)

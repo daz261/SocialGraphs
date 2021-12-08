@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0a4b14f-ff3a-4af7-a894-86c5b8511f11" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/project/explainer_notebook_images/model_weights.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/predictor/prepare_input_success.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/G_sentiment.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/project/G_sentiment.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/data/collaboration_clean.csv" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/collaboration_clean.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/graph_building/build_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/graph_building/build_network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/predictor/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/predictor/train.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +39,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2059VRFtXc5Yp1UNyRFzTf5fJh3" />
   <component name="ProjectLevelVcsManager">
@@ -67,7 +73,7 @@
       <recent name="$PROJECT_DIR$/project" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.build_network">
+  <component name="RunManager" selected="Python.train">
     <configuration name="analysis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SocialGraphs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -134,7 +140,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="prepare_input" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="prepare_input_success" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SocialGraphs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -147,7 +153,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/predictor/prepare_input.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/predictor/prepare_input_success.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -180,18 +186,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.build_network" />
-      <item itemvalue="Python.prepare_input" />
       <item itemvalue="Python.train" />
       <item itemvalue="Python.network_analysis" />
       <item itemvalue="Python.analysis" />
+      <item itemvalue="Python.prepare_input_success" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.train" />
+        <item itemvalue="Python.prepare_input_success" />
         <item itemvalue="Python.build_network" />
         <item itemvalue="Python.analysis" />
         <item itemvalue="Python.network_analysis" />
-        <item itemvalue="Python.train" />
-        <item itemvalue="Python.prepare_input" />
       </list>
     </recent_temporary>
   </component>
@@ -240,7 +246,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -286,16 +291,6 @@
           <option name="timeStamp" value="299" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/project/predictor/train.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="314" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/project/predictor/train.py</url>
-          <line>27</line>
-          <option name="timeStamp" value="317" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/project/predictor/prepare_input.py</url>
           <line>26</line>
           <option name="timeStamp" value="318" />
@@ -315,6 +310,36 @@
           <line>47</line>
           <option name="timeStamp" value="337" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/project/predictor/prepare_input_success.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="340" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/project/predictor/train.py</url>
+          <line>58</line>
+          <option name="timeStamp" value="343" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/project/predictor/train.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="346" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/project/predictor/prepare_input_success.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="348" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/project/graph_building/build_network.py</url>
+          <line>111</line>
+          <option name="timeStamp" value="349" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/project/graph_building/build_network.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="350" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -326,21 +351,22 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SocialGraphs$build_network.coverage" NAME="build_network Coverage Results" MODIFIED="1638366318125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/" />
-    <SUITE FILE_PATH="coverage/SocialGraphs$network_gif_example.coverage" NAME="network_gif_example Coverage Results" MODIFIED="1636915469692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
-    <SUITE FILE_PATH="coverage/SocialGraphs$load_albums.coverage" NAME="load_albums Coverage Results" MODIFIED="1637143301222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
-    <SUITE FILE_PATH="coverage/SocialGraphs$load_artist_attributes2.coverage" NAME="load_artist_attributes2 Coverage Results" MODIFIED="1637168062575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
-    <SUITE FILE_PATH="coverage/SocialGraphs$load_artists_recurrent.coverage" NAME="load_artists_recurrent Coverage Results" MODIFIED="1636549798398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
-    <SUITE FILE_PATH="coverage/SocialGraphs$load_artist_attributes.coverage" NAME="load_artist_attributes Coverage Results" MODIFIED="1637166729061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
-    <SUITE FILE_PATH="coverage/SocialGraphs$train.coverage" NAME="train Coverage Results" MODIFIED="1638044046538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/predictor" />
-    <SUITE FILE_PATH="coverage/SocialGraphs$loads_albums_wikipedia.coverage" NAME="loads_albums_wikipedia Coverage Results" MODIFIED="1636541609612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/data" />
-    <SUITE FILE_PATH="coverage/SocialGraphs$load_artists_wikipedia.coverage" NAME="load_artists_wikipedia Coverage Results" MODIFIED="1636556060149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/data" />
-    <SUITE FILE_PATH="coverage/SocialGraphs$prepare_input.coverage" NAME="prepare_input Coverage Results" MODIFIED="1637943289167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/predictor" />
-    <SUITE FILE_PATH="coverage/SocialGraphs$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1638364157267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/sentiment_analysis" />
-    <SUITE FILE_PATH="coverage/SocialGraphs$build_network__1_.coverage" NAME="build_network Coverage Results" MODIFIED="1637433943194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/" />
     <SUITE FILE_PATH="coverage/SocialGraphs$create_network_gif.coverage" NAME="create_network_gif Coverage Results" MODIFIED="1636989696235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
-    <SUITE FILE_PATH="coverage/SocialGraphs$load_data.coverage" NAME="load_artists Coverage Results" MODIFIED="1636322695396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$load_artist_attributes2.coverage" NAME="load_artist_attributes2 Coverage Results" MODIFIED="1637168062575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$prepare_input.coverage" NAME="prepare_input Coverage Results" MODIFIED="1638613498696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/predictor" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$build_network__1_.coverage" NAME="build_network Coverage Results" MODIFIED="1637433943194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$load_albums.coverage" NAME="load_albums Coverage Results" MODIFIED="1637143301222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$load_artists_recurrent.coverage" NAME="load_artists_recurrent Coverage Results" MODIFIED="1636549798398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
     <SUITE FILE_PATH="coverage/SocialGraphs$network_analysis.coverage" NAME="network_analysis Coverage Results" MODIFIED="1638126752363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/basic_analysis" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$train.coverage" NAME="train Coverage Results" MODIFIED="1638980755948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/predictor" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$loads_albums_wikipedia.coverage" NAME="loads_albums_wikipedia Coverage Results" MODIFIED="1636541609612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/data" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1638364157267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/sentiment_analysis" />
     <SUITE FILE_PATH="coverage/SocialGraphs$load_spotify_data.coverage" NAME="load_spotify_data Coverage Results" MODIFIED="1637922621373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/spotify" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$build_network.coverage" NAME="build_network Coverage Results" MODIFIED="1638385871113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$network_gif_example.coverage" NAME="network_gif_example Coverage Results" MODIFIED="1636915469692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$load_artist_attributes.coverage" NAME="load_artist_attributes Coverage Results" MODIFIED="1637166729061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$prepare_input_success.coverage" NAME="prepare_input_success Coverage Results" MODIFIED="1638975150825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/predictor" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$load_artists_wikipedia.coverage" NAME="load_artists_wikipedia Coverage Results" MODIFIED="1636556060149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/data" />
+    <SUITE FILE_PATH="coverage/SocialGraphs$load_data.coverage" NAME="load_artists Coverage Results" MODIFIED="1636322695396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
   </component>
 </project>

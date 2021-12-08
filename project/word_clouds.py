@@ -16,18 +16,15 @@ import networkx as nx
 from nltk.probability import FreqDist
 import math
 import matplotlib.pyplot as plt
-from wordcloud import WordCloud #, ImageColorGenerator
+from wordcloud import WordCloud
 #from textblob import TextBlob
 import json
-#from project.util import DATA_PATH
+
 
 # save the path of the wiki texts
 script_dir = os.path.dirname(os.path.abspath(__file__))
-#print(script_dir)
-#folder_dir = DATA_PATH / "lyrics\\"
 folder_dir = "data\\lyrics\\"
 path_txts = os.path.join(script_dir, folder_dir)
-# print(path_txts)
 
 # Define set of stopwords in english
 stopWords = set(stopwords.words('english'))
@@ -39,8 +36,15 @@ LC = max(nx.weakly_connected_components(G),key=len)
 G = nx.DiGraph(G.subgraph(LC))
 G_u = G.to_undirected()
 
+"""
 partition = community_louvain.best_partition(G_u)
-
+        
+with open(script_dir+'\\data\\louvain_partition.txt','w') as x:
+        json.dump(partition,x)
+"""
+with open(os.path.join(script_dir,'data\\louvain_partition.txt'),'r') as x:
+        partition = json.load(x)
+        
 def get_file_names(path_txts = path_txts):
     # get list of txt file names
     filenames = [f for f in os.listdir(path_txts) if isfile(join(path_txts, f))]
@@ -58,8 +62,6 @@ def pre_process_lyrics(path_txts = path_txts):
     pattern_headers = r'=+[\w\s]+=+'
     # pattern to remove new lines
     pattern_nl = r'\\n'
-    # Define set of stopwords in english
-    #stopWords = set(stopwords.words('english'))
     unfiltered_texts = [open(path_txts+filename,'r',encoding='Latin1').read() for filename in files]
     temp = [re.sub(pattern_headers,'',text) for text in unfiltered_texts]
     temp = [re.sub(pattern_nl,' ',text).lower() for text in temp]
@@ -70,8 +72,6 @@ def pre_process_lyrics(path_txts = path_txts):
 
 
 def pre_process_lyrics_single(path_txt):
-    # get list of txt file names
-    #file = get_file_name_single(path_txt)
     tk = nltk.WordPunctTokenizer()
     wnl = nltk.WordNetLemmatizer()
     # pattern to remove headers
@@ -108,14 +108,11 @@ def lyrics_to_community_genres (path_txts = path_txts, partition = partition):
     communities_louvain = {community:artists
                            for community,artists in communities_louvain.items()
                            if len(artists) > 0}
-    community_to_genres = {community:[genre for artist in artists
+    community_to_genres = {community:[genre.capitalize() for artist in artists
                                       for genre in G_u.nodes[artist]['genres']]
                            for community,artists in communities_louvain.items()}
     return community_to_genres
 
-#def plot_community_genres(community_to_genres):
-#    community_dominant_genre = sorted(FreqDist(community_to_genres.items()), key = lambda x: , reverse=True)[0]
-    
 
 def calculate_tfidf(G_u, partition = partition, path_txts = path_txts, as_TCIDF = False):
     filenames = get_file_names(path_txts)
@@ -170,12 +167,14 @@ def calculate_tfidf(G_u, partition = partition, path_txts = path_txts, as_TCIDF 
     # number of documents N=|D|. D is the communities!
     numdocs = len(unique_coms)
     # number of documents where term t appears (adjusted with +1 t avoid division by zero) |{d \in D: t \in d}|
-    numdocs_tinD = {word:len([word for com in unique_coms if word in text_coms[com]]) for word in tqdm(text_all_coms_unique)}
+    numdocs_tinD = {word:len([word for com in unique_coms if word in text_coms[com]])
+                    for word in tqdm(text_all_coms_unique)}
     # IDF = log(N/|{d \in D: t \in D}|)
     IDF_coms = {word:math.log(numdocs/(numdocs_tinD[word]+1)) for word in text_all_coms_unique}
     
     # calculate TFIDF for each community and each word in each community
-    TFIDF_coms = {com:{word:TF_coms[com][word]*IDF_coms[word] for word in set(text_coms[com])} for com in unique_coms}
+    TFIDF_coms = {com:{word:TF_coms[com][word]*IDF_coms[word] for word in set(text_coms[com])}
+                  for com in unique_coms}
     if as_TCIDF:
         TCIDF_coms = get_TCIDF(TFIDF_coms,text_coms)
         return TCIDF_coms
@@ -203,21 +202,28 @@ def plot_wordclouds(Category,TCIDF,unique_races,mask=None):
             plt.show()
 
 def main():
-    tcidf = calculate_tfidf(G_u, as_TCIDF=True)
     """
+    
     tcidf = calculate_tfidf(G_u, as_TCIDF=True)
+    
     with open(script_dir+'\\data\\TCIDF_lyrics.txt','w') as x:
         json.dump(tcidf,x)
-    """
+    
+    tfidf = calculate_tfidf(G_u, as_TCIDF=False)
+    with open(script_dir+'\\data\\TFIDF_lyrics.txt','w') as x:
+        json.dump(tfidf,x)
+
     #com_genres = lyrics_to_community_genres()
     #print(com_genres)
     #print(com_genres.keys())
+    """
     
+    """
     with open(script_dir+'\\data\\TCIDF_lyrics.txt','r') as x:
         tcidf = json.load(x)
     unique_coms = list(tcidf.keys())
     print([len(i) for i in tcidf.values()])
 #    plot_wordclouds('Community',tcidf,unique_coms)
-
+    """
 if __name__ == '__main__':
     main()

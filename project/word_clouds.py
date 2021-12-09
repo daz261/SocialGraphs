@@ -188,6 +188,18 @@ def get_TCIDF(TFIDF,text_races):
 
 def plot_wordclouds(Category,TCIDF,unique_races,mask=None):
     # prepare text by category for the wordcloud function. Add each word a number of times according to their TC-IDF scores
+    
+    community_to_artists = {community:[artist for artist in partition
+                                  if partition[artist] == community]
+                           for community in set(partition.values())}
+    # remove empty communities
+    community_to_artists = {community:artists
+                           for community,artists in community_to_artists.items()
+                           if len(artists) > 0}
+    community_to_artistcollabs = {community:sorted([(artist,dict(G.nodes)[artist]['in_degree']+dict(G.nodes)[artist]['out_degree'])
+                                  for artist in artists], key=lambda x: x[1], reverse=True)
+                                  for community,artists in community_to_artists.items()}
+    
     onestring_races = {race:"" for race in unique_races}
     for race in unique_races:
         for word in TCIDF[race]:
@@ -200,7 +212,9 @@ def plot_wordclouds(Category,TCIDF,unique_races,mask=None):
             plt.figure(figsize=(10,8))
             plt.imshow(wc,interpolation="bilinear")
             plt.axis('off')
-            plt.title(f'{Category}: {race}', fontdict = {'fontsize' : 20})
+            group_name = ", ".join([t[0] for t in community_to_artistcollabs[int(race)][:3]])
+            
+            plt.title(f'{Category}: {group_name}', fontdict = {'fontsize' : 20})
             plt.show()
 
 

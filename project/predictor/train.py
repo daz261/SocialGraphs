@@ -66,8 +66,7 @@ def plot_linear_prediction(y, lin_predicted, title=""):
     ax.plot([y.min(), y.max()], [y.min(), y.max()], 'k--', c="red", alpha=0.6)
     ax.set_xlabel('Actual weeks on chart', fontsize=14)
     ax.set_ylabel('Predicted weeks on chart', fontsize=14)
-    plt.suptitle(title)
-    plt.title("Predicted and Actual weeks on chart according to Ridge Regressor \nPearson correlation: " + str(
+    plt.title(title + "\n Predicted and Actual weeks on chart according to Ridge Regressor \nPearson correlation: " + str(
         np.round(corr, 3)) + ", " + "P-value: " + str(np.round(p, 4)), fontsize=16)
     plt.show()
 

@@ -33,7 +33,7 @@ def visualize_weights(weights, feature_name):
     plt.show()
 
 
-def evaluate(model: sklearn.pipeline.Pipeline, G, random_dataset=True, success=False):
+def evaluate(model: sklearn.pipeline.Pipeline, G, random_dataset=True, success=False, title=""):
     if success:
         X_test, y_test, _ = prepare_dataset_success(G)
     else:
@@ -55,10 +55,10 @@ def evaluate(model: sklearn.pipeline.Pipeline, G, random_dataset=True, success=F
     else:
         mse = metrics.mean_squared_error(y_test, y_pred)
         corr, p = pearsonr(y_test, y_pred)
-        plot_linear_prediction(y_test, y_pred)
+        plot_linear_prediction(y_test, y_pred, title)
         return {"mse": mse, "corr": round(corr, 2), "p-value": round(p, 2)}
 
-def plot_linear_prediction(y, lin_predicted):
+def plot_linear_prediction(y, lin_predicted, title=""):
     corr, p = pearsonr(y, lin_predicted)
 
     fig, ax = plt.subplots(figsize=(10, 8))
@@ -66,7 +66,7 @@ def plot_linear_prediction(y, lin_predicted):
     ax.plot([y.min(), y.max()], [y.min(), y.max()], 'k--', c="red", alpha=0.6)
     ax.set_xlabel('Actual weeks on chart', fontsize=14)
     ax.set_ylabel('Predicted weeks on chart', fontsize=14)
-
+    plt.suptitle(title)
     plt.title("Predicted and Actual weeks on chart according to Ridge Regressor \nPearson correlation: " + str(
         np.round(corr, 3)) + ", " + "P-value: " + str(np.round(p, 4)), fontsize=16)
     plt.show()
